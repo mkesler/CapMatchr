@@ -1,0 +1,8 @@
+<div class="image">
+   <img src="data:image/jpg;base64,{{this.currentEmployee.picture}}"/>
+</div>
+<div>
+   {{#each this.nameChoices}}
+      <div><button data-name="{{this}}">{{this}}</button></div>
+   {{/each}}
+</div>

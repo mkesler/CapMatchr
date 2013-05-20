@@ -1,0 +1,28 @@
+<div class="resultsHeader">
+   <button>Home</button>
+   <div class="title">Results</div>
+</div>
+
+<div class="actions">
+   
+</div>
+
+<div class="resultsTable">
+   {{#each employees}}
+      <div class="row">
+         <div class="image">
+            <img src="data:image/jpg;base64,{{this.picture}}"/>
+         </div>
+         <div class="name">
+            {{this.firstname}} {{this.lastname}}
+         </div>
+         <div class="result">
+            {{#if this.result}}
+               yep
+            {{else}}
+               nope
+            {{/if}}
+         </div>
+      </div>
+   {{/each}}
+</div>

@@ -1,0 +1,18 @@
+button {
+  height: 40px;
+  margin: 5px 0;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #CCC;
+  background-image: -webkit-linear-gradient(#ffffff, #cccccc);
+}
+button.correct {
+  color: #fff;
+  border: 1px solid #77AF0F;
+  background-image: -webkit-linear-gradient(#b2db64, #7ebc0a, #77af0f);
+}
+button.incorrect {
+  color: #fff;
+  border: 1px solid #AD1B1B;
+  background-image: -webkit-linear-gradient(#e45050, #d52020, #ad1b1b);
+}

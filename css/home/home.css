@@ -1,0 +1,21 @@
+.home {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.home .borderContainer {
+  border-radius: 20px;
+  border: 1px solid #3983CC;
+  padding: 20px 0;
+  background-color: #3983CC;
+  margin-bottom: 20px;
+}
+.home .borderContainer .image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.home .borderContainer .title {
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+}

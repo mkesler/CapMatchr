@@ -1,0 +1,120 @@
+@charset "utf-8";
+.home {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.home .borderContainer {
+  border-radius: 20px;
+  border: 1px solid #3983CC;
+  padding: 20px 0;
+  background-color: #3983CC;
+  margin-bottom: 20px;
+}
+.home .borderContainer .image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.home .borderContainer .title {
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+}
+.roundHeader {
+  padding: 10px 0;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #3983CC;
+  color: #fff;
+  font-size: 16px;
+}
+.play {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.play div.image {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.play div.image img {
+  width: 35%;
+}
+button {
+  height: 40px;
+  margin: 5px 0;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #CCC;
+  background-image: -webkit-linear-gradient(#ffffff, #cccccc);
+}
+button.correct {
+  color: #fff;
+  border: 1px solid #77AF0F;
+  background-image: -webkit-linear-gradient(#b2db64, #7ebc0a, #77af0f);
+}
+button.incorrect {
+  color: #fff;
+  border: 1px solid #AD1B1B;
+  background-image: -webkit-linear-gradient(#e45050, #d52020, #ad1b1b);
+}
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial;
+  font-size: 14px;
+  background-color: #F9F9F9;
+}
+.resultsHeader {
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #3983CC;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 0;
+}
+.resultsHeader button {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-size: 12px;
+  width: auto;
+  height: auto;
+  margin: 0 0 0 10px;
+  padding: 5px;
+}
+.resultsTable {
+  display: table;
+  width: auto;
+  text-align: center;
+}
+.resultsTable .row {
+  display: table-row;
+  width: auto;
+  clear: both;
+}
+.resultsTable .row .image {
+  border-bottom: 1px solid #333;
+  border-right: 1px solid #333;
+  width: 100px;
+  float: left;
+  display: table-column;
+}
+.resultsTable .row .image img {
+  width: 80%;
+}
+.resultsTable .row .name {
+  padding: 20px 0;
+  width: 150px;
+  border-bottom: 1px solid #333;
+  border-right: 1px solid #333;
+  float: left;
+  display: table-column;
+}
+.resultsTable .row .result {
+  padding: 20px 0;
+  width: 50px;
+  float: left;
+  display: table-column;
+  border-bottom: 1px solid #333;
+}
