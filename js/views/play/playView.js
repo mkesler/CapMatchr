@@ -19,16 +19,21 @@ define([
         self.evaluating = false;
         self.render();
       });
+      this.model.on('change:done', function() {
+        self.evaluating = false;
+        self.render();
+      });
     },
     render: function() {
-      var self = this;
-      if(self.model.get('round') == 10) {
-        window.location="/results";
+      console.log(this.model.get('done'));
+      if(this.model.get('done')) {
+        window.location = 'results';
       }
+      var self = this;
       // Use a partial template for the picture and names
       Handlebars.registerPartial("round", roundTemplate);
       $('#container').html(self.handlebars(self.model.toJSON()));
-      $('.play').fadeIn(600);
+      $('.play').fadeIn(700);      
     },
     evaluateSelection: function(ev) {
       if(!this.evaluating) { // this seems weird - need to unbind BB events?
@@ -48,19 +53,19 @@ define([
           $('button[data-name="'+ this.model.get('correctName') + '"]').addClass('correct');
         }
 
-        // advance the round or show results
+        // advance the round or go to results
         setTimeout(function() {
-          if(self.model.get('round') < 10) {
-            self.model.set('round', self.model.get('round') + 1);
-            $('.play').fadeOut(500, function() {
-              self.model.save();
-            });
-          }
-          else {
-            window.location="/results";
-            //router.navigate("/results/", {trigger:true});
-          }
-        }, 2000);
+          $('.play').fadeOut(500, function() {
+            if(self.model.get('round') == 10) {
+              self.model.set('done', true);
+            }
+            else {
+              self.model.set('round', self.model.get('round') + 1);  
+            }
+
+            self.model.save();
+          });        
+        }, 1000);
       }
     }
   });

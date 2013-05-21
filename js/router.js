@@ -41,6 +41,7 @@ define([
     app_router.on('route:showResults', function() {
       require(['views/results/resultsView'], function(ResultsView, RoundModel) {
         $('#container').html(new ResultsView({model:roundModel}).render());
+        $('.results').fadeIn(600);
       });
     });
 

@@ -1,28 +1,39 @@
+<div class="results" style="display:none;">
 <div class="resultsHeader">
    <button>Home</button>
    <div class="title">Results</div>
 </div>
 
 <div class="actions">
-   
+   <div class="content">
+      <h1>{{totalCorrect}} of 10 Correct</h1>
+      <button>New Game</button>
+   </div>
 </div>
 
 <div class="resultsTable">
+
+   <table border="0" cellspacing="0" cellpadding='0'>
    {{#each employees}}
-      <div class="row">
-         <div class="image">
+      <tr>
+         <td class='image'>
             <img src="data:image/jpg;base64,{{this.picture}}"/>
-         </div>
-         <div class="name">
-            {{this.firstname}} {{this.lastname}}
-         </div>
-         <div class="result">
+         </td>
+         <td class='name'>
+            <div>{{this.firstname}} {{this.lastname}}</div>
+            <div>{{this.title}}</div>
+            <div>{{this.location}}</div>
+         </td>
+         <td class='result'>
             {{#if this.result}}
-               yep
+               <i class="icon-ok"></i>
             {{else}}
-               nope
+               <i class="icon-remove"></i>
             {{/if}}
-         </div>
-      </div>
+         </td>
+      </tr>
    {{/each}}
+   </table>
+</div>
+
 </div>

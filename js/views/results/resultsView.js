@@ -18,7 +18,13 @@ define([
     },
     route: function(ev) {
       var button = $(ev.currentTarget);
-      window.location = button.html().toLowerCase(); // eehhhh ;)
+      if(button.html() == 'Home') {
+        window.location = 'home';
+      }
+      else {
+        localStorage.removeItem('gamestate');
+        window.location = 'play';
+      }
     }
   });
 

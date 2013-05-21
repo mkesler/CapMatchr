@@ -45,7 +45,8 @@ define([
             'nameChoices': [currentName].concat(Utils.selectIncorrectNames(state.allNames, currentName)).sort(function(){return 0.5 - Math.random()}),
             'correctName': currentName,
             'results': state.results,
-            'totalCorrect': state.totalCorrect
+            'totalCorrect': state.totalCorrect,
+            'done': state.done
           });
         break;
         case 'update':

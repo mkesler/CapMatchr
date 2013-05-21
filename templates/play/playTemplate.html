@@ -1,7 +1,13 @@
-<div class="roundHeader">
-   Round {{this.round}} of 10
-</div>
 
-<div class="play" style="display:none;">
-   {{> round}}
-</div>
+{{#if this.round}}
+   <div class="roundHeader">
+      Round {{this.round}} of 10
+   </div>
+   <div class="play" style="display:none;">
+      {{> round}}
+   </div>
+{{else}}
+   <div class='loading'>
+      <img src="../img/loading.gif"/>
+   </div>
+{{/if}}
